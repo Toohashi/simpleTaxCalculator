@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tax Calculator</title>
+        <script src="jquery-3.1.0.slim.min.js"></script>
+    </head>
+    <body>
+        <!--Text description-->
+        <h1>Tax Calculator for ACCG924</h1>
+        <h2>Author: <a href="https://google.com/+oliverwang">Oliver Wang</a></h2>
+        <br />
+        
+        <div id="advancedFunctions">
+            <a id="advFuncExpand" href="#" onClick="advFuncExpand()" style="color:blue;text-decoration:underline">Expand the advanced functions instruction</a>
+        </div>
+        <br />
+        
+        <!--Elements-->
+        <p>Taxable income:<br />
+            <input id="tax_income" type="number" min="0" value="150000"><br />
+        </p>
+        
+        <p>PAYG instalment:<br />
+            <input id="payg_instalment" type="number" min="0"><br />
+        </p>
+        
+        <p>Are you an Australian resident?<br />
+            <input type="radio" id="resident0" name="resident" value="true" onclick="resi()" checked>Yes<br />
+            <input type="radio" id="resident1" name="resident" value="false" onclick="resi()">No<br />
+        </p>
+        
+        <p>Do you have Medicare?<br />
+            <input type="radio" id="medicare0" name="medicare" value="true" checked>Yes, I do.<br />
+            <input type="radio" id="medicare1" name="medicare" value="false">No, I have private insurance.<br />
+        </p>
+        
+        <p>Are you eligible to the low income offset?<br />
+            <input type="radio" id="low_income_offset0" name="low_income_offset" value="true" checked>Yes, I am.<br />
+            <input type="radio" id="low_income_offset1" name="low_income_offset" value="false">No, I am not.<br />
+        </p>
+        
+        <p>
+            <input type="checkbox" name="output_details" value="true"> Tick here to directly request the detailed result.
+        </p>
+        <p>
+            <input type="button" id="calc" value="Calculate" onClick="main()">
+        </p>
+        
+        <div id="result">
+        
+        </div>
+        
+        <br />
+        <br />
+        <br />
+        
+        <div id="update_time" style="font-size:12px">
+        
+        </div>
+        
+        <!--Loading main script-->
+        <script src="calc_main.js"></script>
+    </body>
+</html>
